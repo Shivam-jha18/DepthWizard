@@ -1,0 +1,14 @@
+torch
+torchvision
+opencv-python
+rasterio
+geopandas
+open3d
+trimesh
+fastapi
+uvicorn
+numpy
+matplotlib
+scikit-learn
+transformers
+accelerate

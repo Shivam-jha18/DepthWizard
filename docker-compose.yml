@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  depthwizard:
+    build: .
+    container_name: depthwizard-standalone
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/output:/app/data/output
+      - ./data/input:/app/data/input
+      - ./data/srtm_dem:/app/data/srtm_dem
+    restart: unless-stopped
+    environment:
+      - OFFLINE_MODE=1
+      - PYTHONUNBUFFERED=1
